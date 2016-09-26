@@ -27,7 +27,7 @@ Fraction::Fraction(int n, int d) : m_Numer(n), m_Denom(d) {
    ++s_ctors;
 }
 
-Fraction Fraction::multiply(Fraction f2) {
+Fraction Fraction::multiply(Fraction& f2) {
    return Fraction (m_Numer*f2.m_Numer, m_Denom*f2.m_Denom);
 }
 

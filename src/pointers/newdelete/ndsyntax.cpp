@@ -9,6 +9,17 @@ int main() {
  ip = new int;              /* allocate space for an int */
  int* jp = new int(13);     /* allocate and initialize */
  //[...]      
+ *jp *= 100;
+ *ip = *jp;
+ cout << "jp: " << *jp << endl;
+ cout << "ip: " << *ip << endl;
  delete ip;                 /* Without this, we have a memory leak. */
  delete jp;
+ int a = 10, b = 20;
+ int& ra = a;
+ cout << "ra: "<< ra << endl;
+ ra = 20;
+ cout << "ra: " << ra << endl;
+ cout << "&ra: " << &ra << endl;
+ cout << "*&ra: " << *&ra << endl;
 }

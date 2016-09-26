@@ -15,9 +15,9 @@ int main() {
   t1.set(23, 'H');
   t2.set(1234, 'w');
   t1.increment();
-  //cout << t1.m_Number;  
+  cout << t1.getNumber() << endl;
   display(t1, 3);
-  //cout << i << endl;
+  // cout << i << endl;
   t2.show();
   return 0;
 }

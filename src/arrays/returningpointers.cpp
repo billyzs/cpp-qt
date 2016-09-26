@@ -5,7 +5,7 @@
 */
 
 #include <assert.h>
-
+#include <iostream>
 int paramSize;
 
 void bar(int* integers) {
@@ -20,7 +20,7 @@ int* foo(int arrayparameter[]) {
 }
     
 int main(int argc, char** argv) {
-    int intarray2[40] = {9,9,9,9,9,9,9,2,1};
+    int intarray2[10] = {9,9,9,9,9,9,9,2,1};
     char chararray[20] = "Hello World"; /* Special syntax for initializing char array. */
     int intarray1[20];                  /* Uninitialized memory. */
     int* retval;                        /* Uninitialized pointer. */
@@ -31,8 +31,12 @@ int main(int argc, char** argv) {
     assert (retval[2] == 3);
     assert (retval[2] = intarray2[2]);
     assert (retval == intarray2);
-    int refSize = getSize(intarray2);
-    assert(refSize == paramSize);
+    int refSize = sizeof(intarray2);
+    using namespace std;
+    // try {assert(refSize == paramSize);}
+    //catch(int e){
+    cout << "ref: " << refSize << "param: " << paramSize << endl;
+    //}
     return 0;
 }
 

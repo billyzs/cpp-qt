@@ -16,6 +16,7 @@ int main() {
     cout << *ip << endl;
     delete ip;
     cout << *ip2 << endl;
+    cout << *ip << endl;
     cout << ip << tab << ip2 << endl;
     return 0;
 }

@@ -17,3 +17,12 @@ void Thing::show() {
   cout << m_Number << '\t' << m_Character << endl;
 }
 
+int Thing::getNumber() const
+{
+  return m_Number;
+}
+
+char Thing::getChar() const
+{
+  return m_Character;
+}

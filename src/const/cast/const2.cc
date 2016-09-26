@@ -7,16 +7,20 @@ public:
         mData(initializer), printcounter(0) {}
     void print() const;
     void showprintcounter() const {
-      cout << printcounter << endl; 
+      std::cout << printcounter << std::endl; 
+    }
+    void incrementPrintCounter() const {
+      printcounter += 1;
     }
 
 private:
     int mData;
-    int printcounter;
+    mutable int printcounter;
 };
 
 void Quux::print() const {
     cout << mData << endl; 
+    incrementPrintCounter();
 }
 
 int main() {

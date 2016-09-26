@@ -5,7 +5,7 @@ int main(){
 
   int* b = a + 1;
   cout << "a[3] = " << a[3] << '\n'
-       << "b[3] = " << b[3] << endl;
+       << "b[5] = " << b[5] << endl;
 
   //It gets even worse.
   int c = 123;
